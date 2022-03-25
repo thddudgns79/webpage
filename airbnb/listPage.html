@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/l1_nav.css">
+    <link rel="stylesheet" href="./css/l1_filter.css">
+    <link rel="stylesheet" href="./css/l2.css">
+    <link rel="stylesheet" href="./css/m3.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/l1.js"></script>
+    <script src="./js/l2.js"></script>
+    <script src="./js/m3.js"></script>
+</head>
+<body>
+    <header>
+        <div id="l1_header_wrapper">
+            <!-- l1_header1 -->
+            <div id="l1_header1">
+                <!-- l1_header1 logo -->
+                <div id="l1_logo_wrapper">
+                    <div id="l1_logo">
+                        <a>
+                            <div>
+                                <svg width="102" height="32" fill="currentcolor" style="display: block;">
+                                    <path
+                                        d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5zM41.54 24.12a5.02 5.02 0 01-3.95-1.83 6.55 6.55 0 01-1.6-4.48 6.96 6.96 0 011.66-4.58 5.3 5.3 0 014.08-1.86 4.3 4.3 0 013.7 1.92l.1-1.57h2.92V23.8h-2.93l-.1-1.76a4.52 4.52 0 01-3.88 2.08zm.76-2.88c.58 0 1.09-.16 1.57-.45.44-.32.8-.74 1.08-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.55.45zM53.45 8.46c0 .35-.06.67-.22.93-.16.25-.38.48-.67.64-.29.16-.6.22-.92.22-.32 0-.64-.06-.93-.22a1.84 1.84 0 01-.67-.64 1.82 1.82 0 01-.22-.93c0-.36.07-.68.22-.93.16-.3.39-.48.67-.64.29-.16.6-.23.93-.23a1.84 1.84 0 011.6.86 2 2 0 01.21.94zm-3.4 15.3V11.7h3.18v12.08h-3.19zm11.68-8.9v.04c-.15-.07-.35-.1-.5-.13-.2-.04-.36-.04-.55-.04-.89 0-1.56.26-2 .8-.48.55-.7 1.32-.7 2.31v5.93h-3.19V11.69h2.93l.1 1.83c.32-.64.7-1.12 1.24-1.48a3.1 3.1 0 011.81-.5c.23 0 .45.02.64.06.1.03.16.03.22.06v3.2zm1.28 8.9V6.74h3.18v6.5c.45-.58.96-1.03 1.6-1.38a5.02 5.02 0 016.08 1.31 6.55 6.55 0 011.6 4.49 6.96 6.96 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.1 1.57-2.92.03zm6.15-2.52c.57 0 1.08-.16 1.56-.45.44-.32.8-.74 1.08-1.25.26-.51.38-1.12.38-1.8 0-.67-.12-1.28-.38-1.79a3.75 3.75 0 00-1.08-1.25 2.95 2.95 0 00-3.12 0c-.45.32-.8.74-1.09 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.56.45zm7.51 2.53V11.69h2.93l.1 1.57a3.96 3.96 0 013.54-1.89 4.1 4.1 0 013.82 2.44c.35.76.54 1.7.54 2.75v7.24h-3.19v-6.82c0-.84-.19-1.5-.57-1.99-.38-.48-.9-.74-1.56-.74-.48 0-.9.1-1.27.32-.35.23-.64.52-.86.93a2.7 2.7 0 00-.32 1.35v6.92h-3.16zm12.52 0V6.73h3.19v6.5a4.67 4.67 0 013.73-1.89 5.02 5.02 0 013.95 1.83 6.57 6.57 0 011.59 4.48 6.95 6.95 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.09 1.57-2.93.03zm6.18-2.53c.58 0 1.09-.16 1.56-.45.45-.32.8-.74 1.09-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a3.63 3.63 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.95.45 1.55.45z">
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- l1_header1_button_wrapper -->
+                <div id="l1_header1_button_group_wrapper">
+                    <a id="l1_host_button_link" href="#">
+                        <div id="l1_host_button">호스트 되기</div>
+                    </a>
+                    <div id="l1_language_button_wrap">
+                        <button id="l1_language_button" type="button">
+                            <div>
+                                <div><svg viewBox="0 0 16 16"
+                                        style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                        <path
+                                            d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div id="l1_login_button_wrap1">
+                        <div id="l1_login_button_wrap2">
+                            <button id="l1_login_button" type="button">
+                                <div id="l1_login_button_left">
+                                    <svg viewBox="0 0 32 32"
+                                        style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                                        <g fill="none" fill-rule="nonzero">
+                                            <path d="m2 16h28"></path>
+                                            <path d="m2 24h28"></path>
+                                            <path d="m2 8h28"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div id="l1_login_button_right">
+                                    <svg viewBox="0 0 32 32"
+                                        style="display: block; height: 100%; width: 100%; fill: currentcolor;">
+                                        <path
+                                            d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- l1_header2 -->
+            <div id="l1_header2">
+                <div id="l1_header2_nav_wrapper">
+                    <div id="l1_nav1_wrap">
+
+                        <button id="l1_nav1" class="l1_nav" type="button">
+                            <div id="l1_nav1_content" class="l1_nav_content">
+                                <div class="l1_nav_name">농장</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav2_wrap">
+                        <button id="l1_nav2" class="l1_nav" type="button">
+                            <div id="l1_nav2_content" class="l1_nav_content">
+                                <div class="l1_nav_name">멋진 수영장</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav3_wrap">
+                        <button id="l1_nav3" class="l1_nav" type="button">
+                            <div id="l1_nav3_content" class="l1_nav_content">
+                                <div class="l1_nav_name">해변 근처</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav4_wrap">
+                        <button id="l1_nav4" class="l1_nav" type="button">
+                            <div id="l1_nav4_content" class="l1_nav_content">
+                                <div class="l1_nav_name">성</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav5_wrap">
+                        <button id="l1_nav5" class="l1_nav" type="button">
+                            <div id="l1_nav5_content" class="l1_nav_content">
+                                <div class="l1_nav_name">통나무집</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav6_wrap">
+                        <button id="l1_nav6" class="l1_nav" type="button">
+                            <div id="l1_nav6_content" class="l1_nav_content">
+                                <div class="l1_nav_name">중국 전통 여인숙</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav7_wrap">
+                        <button id="l1_nav7" class="l1_nav" type="button">
+                            <div id="l1_nav7_content" class="l1_nav_content">
+                                <div class="l1_nav_name">섬</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav8_wrap">
+                        <button id="l1_nav8" class="l1_nav" type="button">
+                            <div id="l1_nav8_content" class="l1_nav_content">
+                                <div class="l1_nav_name">초소형 주택</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav9_wrap">
+                        <button id="l1_nav9" class="l1_nav" type="button">
+                            <div id="l1_nav9_content" class="l1_nav_content">
+                                <div class="l1_nav_name">A자형 주택</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav10_wrap">
+                        <button id="l1_nav10" class="l1_nav" type="button">
+                            <div id="l1_nav10_content" class="l1_nav_content">
+                                <div class="l1_nav_name">Luxe</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav11_wrap">
+                        <button id="l1_nav11" class="l1_nav" type="button">
+                            <div id="l1_nav11_content" class="l1_nav_content">
+                                <div class="l1_nav_name">료칸</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav12_wrap">
+                        <button id="l1_nav12" class="l1_nav" type="button">
+                            <div id="l1_nav12_content" class="l1_nav_content">
+                                <div class="l1_nav_name">캠핑카</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="l1_nav13_wrap">
+                        <button id="l1_nav13" class="l1_nav" type="button">
+                            <div id="l1_nav13_content" class="l1_nav_content">
+                                <div class="l1_nav_name">하우스보트</div>
+                            </div>
+                        </button>
+                    </div>
+                    
+                    <div id="l1_nav14_wrap">
+                        <button id="l1_nav14" class="l1_nav" type="button">
+                            <div id="l1_nav14_content" class="l1_nav_content">
+                                <div class="l1_nav14_left_content">
+                                    <div class="l1_nav_name">더 보기&nbsp</div>
+                                </div>
+                                <div class="l1_nav14_right_content">
+                                    <svg viewBox="0 0 32 32"
+                                        style="display: block; fill: none; height: 8px; width: 8px; stroke: currentcolor; stroke-width: 8; overflow: visible;">
+                                        <g fill="none">
+                                            <path
+                                                d="m28 12-11.2928932 11.2928932c-.3905243.3905243-1.0236893.3905243-1.4142136 0l-11.2928932-11.2928932">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                        <!-- l1_nav_modal -->
+                        <div id="l1_nav_modal_wrap">
+                            <div>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">트리하우스</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">키클라데스 주택</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">돔</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">하우스보트</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">Luxe</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">보트</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">스키를 탄 채로 출입 가능</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">유르트</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">컨테이너</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">속세를 벗어난 숙소</div></button>
+                                <button class="l1_nav_modal_content_button"><div class="l1_nav_modal_content">트룰로</div></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- l1_header2_filter -->
+                <div id="l1_header2_filter_group_wrapper">
+                    <!-- l1_header2_filter1 -->
+                    <div id="l1_header2_filter1">
+                        <div id="l1_header2_filter1_wrap">
+                                <button id="l1_header2_filter1_button" type="button">
+                                    <span>
+                                        <div id="l1_header2_filter1_button_inside" class="l1_header2_filter_button_inside">
+                                            <span class="l1_header2_filter_insideText">언제든</span>
+                                            <span>
+                                                <svg viewBox="0 0 32 32"
+                                                    style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                    <g fill="none">
+                                                        <path
+                                                            d="m28 12-11.2928932 11.2928932c-.3905243.3905243-1.0236893.3905243-1.4142136 0l-11.2928932-11.2928932">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </button>
+                        </div>
+                    </div>
+                    <!-- l1_header2_filter2 -->
+                    <div id="l1_header2_filter2">
+                        <div id="l1_header2_filter2_wrap">
+                                <button  id="l1_header2_filter2_button" type="button">
+                                    <span>
+                                        <div id="l1_header2_filter2_button_inside" class="l1_header2_filter_button_inside">
+                                            <span class="l1_header2_filter_insideText">인원</span>
+                                            <span>
+                                                <svg viewBox="0 0 32 32"
+                                                    style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                    <g fill="none">
+                                                        <path
+                                                            d="m28 12-11.2928932 11.2928932c-.3905243.3905243-1.0236893.3905243-1.4142136 0l-11.2928932-11.2928932">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <span>
+                                </button>
+                        </div>
+                    </div>
+                    <!-- l1_header2_filter3 -->
+                    <div id="l1_header2_filter3">
+                        <button id="l1_header2_filter3_button" type="button">
+                            <div>
+                                <div id="l1_header2_filter3_button_inside" class="l1_header2_filter_button_inside">
+                                    <svg viewBox="0 0 16 16"
+                                        style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                        <path
+                                            d="M5 8c1.306 0 2.418.835 2.83 2H14v2H7.829A3.001 3.001 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.829 4H2V4h6.17A3.001 3.001 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                                        </path>
+                                    </svg>
+                                    <span class="l1_header2_filter_insideText">필터</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- main content -->
+        <div id="l2_main_wrapper">
+            <div id="l2_main_items"> 
+                <div class="l2_main_grid_container">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- filter_modal -->
+        <div id="l1_filter_modal">
+            <div id ="l1_filter_modal_wrapper">
+                <div id = "l1_filter_modal_head_wrapper">
+                    <div id="l1_filter_modal_closeIcon"><button><img src="./images/ios7-close-empty_icon-icons.com_50304 (1).png" alt=""></button></div> 
+                    <div class="l1_filter_modal_hr"><hr></div>
+                </div>
+                
+                <div id = "l1_filter_modal_main_wrapper">
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            취소 수수료 없음 
+                        </div>
+                        <div class ="l1_filter_modal_textImgBox" style="padding:12px 4px 12px 0px">
+                            <div class="l1_filter_modal_smalltext">무료 취소가 가능한 숙소만 표시</div>
+                            <div class="l1_filter_modal_clickArea"><img src="./images/button-off-48.png" alt=""></div>
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            검증된 숙소
+                        </div>
+                        <div style="padding:12px 4px 12px 0px">
+                            <div class="l1_filter_modal_textImgBox">
+                                <div>
+                                    <div class="l1_filter_modal_normalText">에어비앤비 플러스</div>
+                                    <div class="l1_filter_modal_smalltext">퀄리티와 인테리어 디자인이 검증된 숙소 셀렉션</div>
+                                </div>
+                                <div class="l1_filter_modal_clickArea"><img src="./images/button-off-48.png" alt=""></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            숙소 유형
+                        </div>
+                        <div class="l1_filter_modal_checkboxGroup">
+                            <label>
+                                <div>
+                                    <div class="l1_filter_modal_inputbox"><input type="checkbox"></div>
+                                    <div class="l1_filter_modal_textbox">
+                                        <div class="l1_filter_modal_normalText">집 전체</div>
+                                        <div class="l1_filter_modal_smalltext">집 전체를 단독으로 사용합니다</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label>
+                                <div>
+                                    
+                                        <div class="l1_filter_modal_inputbox"><input type="checkbox"></div>
+                                        <div class="l1_filter_modal_textbox">
+                                            <div class="l1_filter_modal_normalText">개인실</div>
+                                            <div class="l1_filter_modal_smalltext">침실은 단독으로 쓰고, 이외의 공간은 호스트나 다른 게스트와 함께 이용할 수도 있습니다.</div>
+                                        </div>
+                                    
+                                </div>
+                            </label> 
+
+                            <label>
+                                <div>
+                                        <div class="l1_filter_modal_inputbox"><input type="checkbox"></div>
+                                        <div class="l1_filter_modal_textbox">
+                                            <div class="l1_filter_modal_normalText">호텔 객실</div>
+                                            <div class="l1_filter_modal_smalltext">부티크 호텔, 호스텔 등의 개인실이나 다인실을 이용합니다</div>
+                                        </div>
+                                    
+                                </div>
+                            </label>
+
+                            <label>
+                                <div>
+                                        <div class="l1_filter_modal_inputbox"><input type="checkbox"></div>
+                                        <div class="l1_filter_modal_textbox">
+                                            <div class="l1_filter_modal_normalText">다인실</div>
+                                            <div class="l1_filter_modal_smalltext">사적 공간 없이, 침실이나 욕실 등을 호스트나 다른 게스트와 함께 이용합니다</div>
+                                        </div>
+                                    
+                                </div>
+                            </label>
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            침실과 침대
+                        </div>
+                        <div style="padding:12px 4px 12px 0px">
+                            <div class="l1_filter_modal_updownBox">
+                                <div class="l1_filter_modal_normalText">침대 수</div>
+                                <div class="l1_filter_modal_buttonGroup">
+                                    <div class="l1_filter_modal_minusButton"><button><img src="./images/4781841_-_cancel_circle_collapse_min_icon.png" alt=""></button></a></div>
+                                    <div class="l1_filter_modal_numberText">0</div>
+                                    <div class="l1_filter_modal_plusButton"><button><img src="./images/8201370_add_plus_button_ui_new_icon.png" alt=""></button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding:12px 4px 12px 0px">
+                            <div class="l1_filter_modal_updownBox">
+                                <div class="l1_filter_modal_normalText">침실 수</div>
+                                <div class="l1_filter_modal_buttonGroup">
+                                    <div class="l1_filter_modal_minusButton"><button><img src="./images/4781841_-_cancel_circle_collapse_min_icon.png" alt=""></button></a></div>
+                                    <div class="l1_filter_modal_numberText">0</div>
+                                    <div class="l1_filter_modal_plusButton"><button><img src="./images/8201370_add_plus_button_ui_new_icon.png" alt=""></button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding:12px 4px 12px 0px">
+                            <div class="l1_filter_modal_updownBox">
+                                <div class="l1_filter_modal_normalText">욕실 수</div>
+                                <div class="l1_filter_modal_buttonGroup">
+                                    <div class="l1_filter_modal_minusButton"><button><img src="./images/4781841_-_cancel_circle_collapse_min_icon.png" alt=""></button></a></div>
+                                    <div class="l1_filter_modal_numberText">0</div>
+                                    <div class="l1_filter_modal_plusButton"><button><img src="./images/8201370_add_plus_button_ui_new_icon.png" alt=""></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            편의시설 더 보기
+                        </div>
+                        <div style="padding:12px 4px 12px 0px">
+                            <div class="l1_filter_modal_textImgBox">
+                                <div>
+                                    <div class="normalText">슈퍼호스트</div>
+                                    <div class="l1_filter_modal_smalltext">슈퍼호스트의 숙소에 머물러보세요</div>
+                                    <div class="l1_filter_modal_soloContent"><button>더 알아보기</button></div>
+                                </div>
+                                <div class="l1_filter_modal_clickArea">
+                                    <img src="./images/button-off-48.png"alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            접근성 편의
+                        </div>
+                        <div id="l1_filter_modal_uniqueText" class="l1_filter_modal_toggle">
+                            호스트가 제공하고 에어비앤비에서 검토한 정보입니다.
+                        </div>
+                        <div class="l1_filter_modal_categorybox">
+                            <div class="l1_filter_modal_categoryText l1_filter_modal_toggle">게스트 출입구 및 주차장</div>
+                            <div class="l1_filter_modal_checkboxGroup">
+                                <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">게스트 출입구에 계단이나 문턱 없음</div></div></label>
+                                <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">너비 81cm 이상의 게스트 출입구</div></div></label>
+                                <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">휠체어 접근 가능 주차 공간</div></div></label>
+                                <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">게스트 출입구까지 계단이나 문턱 없이 이동 가능</div></div></label>
+                            </div>
+                        
+                    
+                        </div>
+
+                        <div class="l1_filter_modal_categorybox l1_filter_modal_toggle">
+                                <div class="l1_filter_modal_categoryText">침실</div>
+                                <div class="l1_filter_modal_checkboxGroup">
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">계단이나 문턱 없는 침실</div></div></label>
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">너비 81cm 이상의 침실 출입구</div></div></label>
+                                </div>
+                              
+                        </div>
+
+                        <div class="l1_filter_modal_categorybox l1_filter_modal_toggle">
+                                <div class="l1_filter_modal_categoryText">욕실</div>
+                                <div class="l1_filter_modal_checkboxGroup">
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">계단이나 문턱 없는 욕실</div></div></label>
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">너비 81cm 이상의 욕실 출입구</div></div></label>
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">샤워실 고정 손잡이</div></div></label>
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">변기 옆 고정 손잡이</div></div></label>
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">계단이나 문턱 없는 샤워실</div></div></label>
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">샤워/목욕 의자</div></div></label>
+                                </div>
+                            
+                        </div>
+
+                        <div class="l1_filter_modal_categorybox l1_filter_modal_toggle">
+                            <div>
+                                <div class="l1_filter_modal_categoryText">장애인용 보조 장치</div>
+                                <div class="l1_filter_modal_checkboxGroup">
+                                    <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">천장형 또는 이동식 리프트</div></div></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="l1_filter_modal_uniqueMoreContent">
+                            <button>접근성 기능 모두 보기</button> 
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            편의시설
+                        </div>
+
+                        <div class="l1_filter_modal_checkboxGroup">
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">주방</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">난방</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">세탁기</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">건조기</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">아침식사</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">실내 벽난로</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">다리미</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">헤어드라이어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">업무 전용 공간</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">TV</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">아기 침대</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">유아용 식탁의자</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">셀프 체크인</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">화재경보기</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">스키를 탄 채로 출입 가능</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">해변에 인접</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">수변에 인접</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">일산화탄소 경보기</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">욕실 단독 사용</div></div></label>
+                        </div>
+                        <div class="l1_filter_modal_moreContent">
+                            <button>편의시설 모두 보기</button> 
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            시설
+                        </div>
+
+                        <div class="l1_filter_modal_checkboxGroup">
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">무료 주차 공간</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">헬스장</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">자쿠지</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">수영장</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">전기차 충전시설</div></div></label>
+                        </div>
+                        <div class="l1_filter_modal_moreContent">
+                            <button>시설 모두 보기</button> 
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            숙소 이용규칙
+                        </div>
+
+                        <div class="l1_filter_modal_checkboxGroup">
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">흡연 가능</div></div></label>
+                        </div>
+                    </section>
+
+                    <div class="l1_filter_modal_hr"><hr></div>
+
+                    <section class="l1_filter_modal_box">
+                        <div>
+                            호스트언어
+                        </div>
+
+                        <div class="l1_filter_modal_checkboxGroup">
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">영어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">프랑스어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">독일어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">이탈리아어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">러시아어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">스페인어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">중국어(간체)</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">힌디어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">포르투갈어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">인도네시아어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">네덜란드어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">태국어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">그리스어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">폴란드어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">타갈로그어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">덴마크어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">스웨덴어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">노르웨이어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">핀란드어</div></div></label>
+                            <label><div><div class="l1_filter_modal_inputbox"><input type="checkbox"></div><div class="l1_filter_modal_textbox">체코어</div></div></label>
+                        </div>
+                        <div class="l1_filter_modal_moreContent">
+                            <button>모두 보기</button> 
+                        </div>
+                    </section>
+                </div>
+
+                <div id = "l1_filter_modal_footer_wrapper"> 
+                    <div class="l1_filter_modal_hr"><hr></div>
+                    <div id="l1_filter_modal_footer_buttonWrapper">
+                        <div id="l1_filter_modal_footer_leftButton"><button>전체 해제</button></div>
+                        <div id="l1_filter_modal_footer_rightButton"><button>300개 이상의 숙소 보기</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id = "m3_outerLine">
+            <div id = "m3_upper">
+                <div id = "m3_upperBox">
+                    <section class = "m3_box">
+                        <div>
+                            <h3>에어비앤비 지원</h3>
+                        </div>
+                        <ul class = "m3_articles">
+                        <li><a href="#">도움말 센터</a></li>
+                        <li><a href="#">안전 정보</a></li>  
+                        <li><a href="#">예약 취소 옵션</a></li> 
+                        <li><a href="#">에어비앤비의 코로나19 대응 방안</a><li> 
+                        <li><a href="#">장애인 지원</a></li>   
+                        <li><a href="#">이웃 민원 신고</a></li>   
+                        </ul>
+                    </section>
+
+                    <section class = "m3_box">
+                        <div>
+                            <h3>커뮤니티</h3>
+                        </div>
+                        <ul class = "m3_articles">
+                            <li><a href="#">Airbnb.org: 재난 구호 숙소</a></li>
+                            <li><a href="#">아프간 난민 지원</a></li>  
+                            <li><a href="#">차별 철폐를 위한 노력</a></li> 
+                        </ul>
+                    </section>
+
+                    <section class = "m3_box">
+                        <div>
+                            <h3>호스팅</h3>
+                        </div>
+                        <ul class = "m3_articles">
+                            <li><a href="#">호스팅 시작하기</a></li>  
+                            <li><a href="#">에어커버: 호스트를 위한 보호 프로그램</a></li>  
+                            <li><a href="#">호스팅 자료 둘러보기</a></li> 
+                            <li><a href="#">커뮤니티 포럼 방문하기</a></li> 
+                            <li><a href="#">책임감 있는 호스팅</a></li>   
+                        </ul>
+                    </section>
+
+                    <section class = "m3_box">
+                        <div>
+                            <h3>소개</h3>
+                        </div>
+                        <ul class = "m3_articles">
+                            <li><a href="#">뉴스룸</a></li>   
+                            <li><a href="#">새로운 기능에 대해 알아보기</a></li>  
+                            <li><a href="#">에어비앤비 공동창업자의 메시지</a></li> 
+                            <li><a href="#">채용정보</a></li> 
+                            <li><a href="#">투자자 정보</a></li>   
+                            <li><a href="#">에어비앤비 Luxe</a></li>   
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div style="margin-bottom: 5px; height: 4%;">
+                <hr style="width: 80%; border: none; height: 0.1px; background-color: gainsboro;">
+            </div>
+
+            <div id = "m3_bottom">
+                <div id ="m3_bottomBox">
+                    <div id ="m3_b1">
+                        <span>© 2022 Airbnb, Inc.</span>
+                        <span style="width: 19px; height: 20px; text-align: center;">·</span>
+                        <span><a href="#">개인정보 처리방침</a></span>
+                        <span style="width: 19px; height: 20px; text-align: center;">·</span>
+                        <span><a href="#">이용약관</a></span>
+                        <span style="width: 19px; height: 20px; text-align: center;">·</span>
+                        <span><a href="#">사이트맵</a></span>
+                        <span style="width: 19px; height: 20px; text-align: center;">·</span>
+                        <span><a href="#">한국의 변경된 환불 정책</a></span>
+                        <span style="width: 19px; height: 20px; text-align: center;">·</span>
+                        <span><a href="#">회사 세부정보</a></span>
+                    </div>
+                    <div id = "m3_b3">
+                        <div><span class="m3_b3_img"><a href="#"><img src="./images/211902_social_facebook_icon.png" alt=""></a></span>
+                            <span class="m3_b3_img"><a href="#"><img src="./images/5305170_bird_social media_social network_tweet_twitter_icon.png" alt=""></a></span>
+                            <span class="m3_b3_img"><a href="#"><img src="./images/104466_instagram_icon.png" alt=""></a></span>
+                            <span class="m3_b3_img"><a href="#"><img src="./images/1175609_address book_contact_contacts_email_naver_icon.png" alt=""></a></span>
+                            <span class="m3_b3_img"><a href="#"><img src="./images/2993685_brand_brands_google_logo_logos_icon.png" alt=""></a></span>
+                        </div>
+                    </div>
+                    <div id = "m3_b2" style="margin-right: 8px;">
+                        <div>
+                            <div id = "m3_modal1Area">
+                                <span class="m3_b2_text"><a href="#" id="m3_modal2Btn">KRW</a></span>
+                                <span id="m3_curr_icon"><a href="#"></a></span>
+                            </div>
+                            <div id = "m3_modal2Area">
+                                <span class="m3_b2_text"><a href="#" id="m3_modal1Btn">한국어(KR)</a></span>
+                                <span class="m3_b2_img"><a href="#"><img src="./images/2867904_globe_icon.png" style="height: 20px; display: inline-block;" ></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal1 -->
+        <div id="m3_modal1">
+            <div id = "m3_modal1_wrapper">
+                <div id = "m3_modal1_head_wrapper">
+                    <div><a href="#"><img src="./images/ios7-close-empty_icon-icons.com_50304 (1).png" alt="" class="m3_closeicon"></a></div> 
+                    <div class = "m3_hideOrShow">
+                        <span><a href="#" class="m3_langBtn">언어와 지역</a> </span>
+                        <span><a href="#" class="m3_currBtn">통화</a></span>
+                    </div>
+                    <div><hr></div>
+                </div>
+                <div id = "m3_modal1_main_wrapper">
+                    <section class="m3_modal1_box">
+                        <div id="m3_modal1_translateBox">
+                            <div>
+                                <div>
+                                    <span style="font-size: 16px;">번역</span>
+                                    <span><img src="./images/google-translate-16.png" style="width: 19px; height: 19px;" alt=""></span>
+                                </div>
+                                <div style="font-size: 14px; color: gray; margin-top: 8px;">설명과 후기가 한국어로 자동 번역됩니다.</div>
+                            </div>
+                            <div>
+                                <div id="m3_modal1_button">
+                                <a href="#"><img src="./images/button-off-48.png" alt="" id = "m3_onofficon"></a> 
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+        
+                    <section class="m3_modal1_box style="clear: both;">
+                        <div>
+                            <h2>추천 언어 및 지역</h2>
+                        </div>
+                        <div id = "m3_reco_items">
+                            <ul>
+                                <li><a href="#" lang="en-US"><div>English</div><div>United States</div></a></li>
+                                <li><a href="#" lang="en-UK"><div>English</div><div>United Kingdom</div></a></li>
+                            </ul>
+                        </div>
+                    </section>
+        
+                    <section class="m3_modal1_box" style="clear: both;">
+                        <div>
+                            <h2>언어와 지역을 선택하세요</h2>
+                        </div>
+                        <div id = "m3_lang_items">
+                            <ul>
+                                <li><a href="#" lang="kr-KR"><div>한국어</div><div>대한민국</div></a></li>
+                                <li><a href="#" lang="az-AZ"><div>Azərbaycan dili</div><div>Azərbaycan</div></a></li>
+                                <li><a href="#" lang="id-ID"><div>Bahasa Indonesia</div><div>Indonesia</div></a></li>
+                                <li><a href="#" lang="bs-BA"><div>Bosanski</div><div>Bosna i Hercegovina</div></a></li>
+                                <li><a href="#" lang="ca-ES"><div>Català</div><div>Espanya</div></a></li>
+                                <li><a href="#" lang="cs-CZ"><div>Čeština</div><div>Česká republika</div></a></li>
+                                <li><a href="#" lang="sr-ME"><div>Crnogorski</div><div>Crna Gora</div></a></li>
+                                <li><a href="#" lang="da-DK"><div>Dansk</div><div>Danmark</div></a></li>
+                                <li><a href="#" lang="de-DE"><div>Deutsch</div><div>Deutschland</div></a></li>
+                                <li><a href="#" lang="de-AT"><div>Deutsch</div><div>Österreich</div></a></li>
+                                <li><a href="#" lang="de-CH"><div>Deutsch</div><div>Schweiz</div></a></li>
+                                <li><a href="#" lang="et-EE"><div>Eesti</div><div>Eesti</div></a></li>
+                                <li><a href="#" lang="en-AU"><div>English</div><div>Australia</div></a></li>
+                                <li><a href="#" lang="en-CA"><div>English</div><div>Canada</div></a></li>
+                                <li><a href="#" lang="en-GY"><div>English</div><div>Guyana</div></a></li>
+                                <li><a href="#" lang="en-IN"><div>English</div><div>India</div></a></li>
+                                <li><a href="#" lang="en-IE"><div>English</div><div>Ireland</div></a></li>
+                                <li><a href="#" lang="en-NZ"><div>English</div><div>New Zealand</div></a></li>
+                                <li><a href="#" lang="en-SG"><div>English</div><div>Singapore</div></a></li>
+                                <li><a href="#" lang="en-AE"><div>English</div><div>United Arab Emirates</div></a></li>
+                                <li><a href="#" lang="es-AR"><div>Español</div><div>Argentina</div></a></li>
+                                <li><a href="#" lang="es-BZ"><div>Español</div><div>Belice</div></a></li>
+                                <li><a href="#" lang="es-BO"><div>Español</div><div>Bolivia</div></a></li>
+                                <li><a href="#" lang="es-CL"><div>Español</div><div>Chile</div></a></li>
+                                <li><a href="#" lang="es-CO"><div>Español</div><div>Colombia</div></a></li>
+                                <li><a href="#" lang="es-CR"><div>Español</div><div>Costa Rica</div></a></li>
+                                <li><a href="#" lang="es-EC"><div>Español</div><div>Ecuador</div></a></li>
+                                <li><a href="#" lang="es-SV"><div>Español</div><div>El Salvador</div></a></li>
+                                <li><a href="#" lang="es-ES"><div>Español</div><div>España</div></a></li>
+                                <li><a href="#" lang="es-US"><div>Español</div><div>Estados Unidos</div></a></li>
+                                <li><a href="#" lang="es-GT"><div>Español</div><div>Guatemala</div></a></li>
+                                <li><a href="#" lang="es-HN"><div>Español</div><div>Honduras</div></a></li>
+                                <li><a href="#" lang="es-419"><div>Español</div><div>Latinoamérica</div></a></li>
+                                <li><a href="#" lang="es-MX"><div>Español</div><div>México</div></a></li>
+                                <li><a href="#" lang="es-NI"><div>Español</div><div>Nicaragua</div></a></li>
+                                <li><a href="#" lang="es-PA"><div>Español</div><div>Panamá</div></a></li>
+                                <li><a href="#" lang="es-PY"><div>Español</div><div>Paraguay</div></a></li>
+                                <li><a href="#" lang="es-PE"><div>Español</div><div>Perú</div></a></li>
+                                <li><a href="#" lang="es-VE"><div>Español</div><div>Venezuela</div></a></li>
+                                <li><a href="#" lang="fr-BE"><div>Français</div><div>Belgique</div></a></li>
+                                <li><a href="#" lang="fr-CA"><div>Français</div><div>Canada</div></a></li>
+                                <li><a href="#" lang="fr-FR"><div>Français</div><div>France</div></a></li>
+                                <li><a href="#" lang="fr-CH"><div>Français</div><div>Suisse</div></a></li>
+                                <li><a href="#" lang="ga-IE"><div>Gaeilge</div><div>Éire</div></a></li>
+                                <li><a href="#" lang="hr-HR"><div>Hrvatski</div><div>Hrvatska</div></a></li>
+                                <li><a href="#" lang="xh-ZA"><div>isiXhosa</div><div>eMzantsi Afrika</div></a></li>
+                                <li><a href="#" lang="zu-ZA"><div>isiZulu</div><div>iNingizimu Afrika</div></a></li>
+                                <li><a href="#" lang="is-IS"><div>Íslenska</div><div>Ísland</div></a></li>
+                                <li><a href="#" lang="it-IT"><div>Italiano</div><div>Italia</div></a></li>
+                                <li><a href="#" lang="it-CH"><div>Italiano</div><div>Svizzera</div></a></li>
+                                <li><a href="#" lang="sw-XX"><div>Kiswahili</div><div>Āfrika</div></a></li>
+                                <li><a href="#" lang="lv-LV"><div>Latviešu</div><div>Latvija</div></a></li>
+                                <li><a href="#" lang="lt-LT"><div>Lietuvių</div><div>Lietuva</div></a></li>
+                                <li><a href="#" lang="hu-HU"><div>Magyar</div><div>Magyarország</div></a></li>
+                                <li><a href="#" lang="mt-MT"><div>Malti</div><div>Malta</div></a></li>
+                                <li><a href="#" lang="ms-MY"><div>Melayu</div><div>Malaysia</div></a></li>
+                                <li><a href="#" lang="nl-BE"><div>Nederlands</div><div>België</div></a></li>
+                                <li><a href="#" lang="nl-NL"><div>Nederlands</div><div>Nederland</div></a></li>
+                                <li><a href="#" lang="no-NO"><div>Norsk</div><div>Norge</div></a></li>
+                                <li><a href="#" lang="pl-PL"><div>Polski</div><div>Polska</div></a></li>
+                                <li><a href="#" lang="pt-BR"><div>Português</div><div>Brasil</div></a></li>
+                                <li><a href="#" lang="pt-PT"><div>Português</div><div>Portugal</div></a></li>
+                                <li><a href="#" lang="ro-RO"><div>Română</div><div>România</div></a></li>
+                                <li><a href="#" lang="sq-AL"><div>Shqip</div><div>Shqipëri</div></a></li>
+                                <li><a href="#" lang="sk-SK"><div>Slovenčina</div><div>Slovensko</div></a></li>
+                                <li><a href="#" lang="sl-SI"><div>Slovenščina</div><div>Slovenija</div></a></li>
+                                <li><a href="#" lang="sr-RS"><div>Srpski</div><div>Srbija</div></a></li>
+                                <li><a href="#" lang="fi-FI"><div>Suomi</div><div>Suomi</div></a></li>
+                                <li><a href="#" lang="sv-SE"><div>Svenska</div><div>Sverige</div></a></li>
+                                <li><a href="#" lang="tl-PH"><div>Tagalog</div><div>Pilipinas</div></a></li>
+                                <li><a href="#" lang="vi-VN"><div>Tiếng Việt</div><div>Việt Nam</div></a></li>
+                                <li><a href="#" lang="tr-TR"><div>Türkçe</div><div>Türkiye</div></a></li>
+                                <li><a href="#" lang="el-GR"><div>Ελληνικά</div><div>Ελλάδα</div></a></li>
+                                <li><a href="#" lang="bg-BG"><div>Български</div><div>България</div></a></li>
+                                <li><a href="#" lang="mk-MK"><div>Македонски</div><div>Северна Македонија</div></a></li>
+                                <li><a href="#" lang="ru-RU"><div>Русский</div><div>Россия</div></a></li>
+                                <li><a href="#" lang="uk-UA"><div>Українська</div><div>Україна</div></a></li>
+                                <li><a href="#" lang="ka-GE"><div>ქართული</div><div>საქართველო</div></a></li>
+                                <li><a href="#" lang="hy-AM"><div>Հայերեն</div><div>Հայաստան</div></a></li>
+                                <li><a href="#" lang="he-IL"><div>עברית</div><div>ישראל</div></a></li>
+                                <li><a href="#" lang="ar-XX"><div>العربية</div><div>العالم</div></a></li>
+                                <li><a href="#" lang="hi-IN"><div>हिन्दी</div><div>भारत</div></a></li>
+                                <li><a href="#" lang="th-TH"><div>ไทย</div><div>ประเทศไทย</div></a></li>
+                                <li><a href="#" lang="ja-JP"><div>日本語</div><div>日本</div></a></li>
+                                <li><a href="#" lang="zh-US"><div>简体中文</div><div>美国</div></a></li>
+                                <li><a href="#" lang="zh-TW-US"><div>繁體中文</div><div>美國</div></a></li>
+                                <li><a href="#" lang="zh-CN"><div>简体中文</div><div>中国</div></a></li>
+                                <li><a href="#" lang="zh-HK"><div>繁體中文</div><div>香港</div></a></li>
+                                <li><a href="#" lang="zh-TW"><div>繁體中文</div><div>台灣</div></a></li>
+                                </ul>
+                            </div>
+                        </section>
+                </div>
+            </div>
+        </div>
+        
+        <!-- modal2 -->
+        <div id="m3_modal2">
+            <div id = "m3_modal2_wrapper">
+                <div id = "m3_modal2_head_wrapper">
+                    <div><a href=""><img src="./images/ios7-close-empty_icon-icons.com_50304 (1).png" alt="" class="m3_closeicon"></a></div> 
+                    <div class = "m3_hideOrShow">
+                        <span><a href="#" class="m3_langBtn">언어와 지역</a> </span>
+                        <span><a href="#" class="m3_currBtn">통화</a></span>
+                    </div>
+                    <div><hr></div>
+                </div>
+                <div id = "m3_modal2_main_wrapper">
+                    <section class="m3_modal2_box">
+                        <div>
+                            <h2>통화를 선택하세요.</h2>
+                        </div>
+                        <div id="m3_curr_items">
+                            <ul>
+                                <li><a href="#"><div>노르웨이 크로네</div><div>NOK - kr</div></a></li>
+                                <li><a href="#"><div>남아프리카공화국 란드</div><div>ZAR - R</div></a></li>
+                                <li><a href="#"><div>뉴질랜드 달러</div><div>NZD - $</div></a></li>
+                                <li><a href="#"><div>덴마크 크로네</div><div>DKK - kr</div></a></li>
+                                <li><a href="#"><div>러시아 루블</div><div>RUB - ₽</div></a></li>
+                                <li><a href="#"><div>루마니아 레우</div><div>RON - lei</div></a></li>
+                                <li><a href="#"><div>말레이시아 링깃</div><div>MYR - RM</div></a></li>
+                                <li><a href="#"><div>멕시코 페소</div><div>MXN - $</div></a></li>
+                                <li><a href="#"><div>모로코 디르함</div><div>MAD</div></a></li>
+                                <li><a href="#"><div>미국 달러</div><div>USD - $</div></a></li>
+                                <li><a href="#"><div>불가리아 레프</div><div>BGN - лв.</div></a></li>
+                                <li><a href="#"><div>브라질 레알</div><div>BRL - R$</div></a></li>
+                                <li><a href="#"><div>사우스아라비아 리얄</div><div>SAR - SR</div></a></li>
+                                <li><a href="#"><div>스웨덴 크로나</div><div>SEK - kr</div></a></li>
+                                <li><a href="#"><div>스위스 프랑</div><div>CHF</div></a></li>
+                                <li><a href="#"><div>신 타이완 달러</div><div>TWD - $</div></a></li>
+                                <li><a href="#"><div>싱가포르 달러</div><div>SGD - $</div></a></li>
+                                <li><a href="#"><div>아랍에미리트 디르함</div><div>AED - ﺩ.ﺇ</div></a></li>
+                                <li><a href="#"><div>영국 파운드</div><div>GBP - £</div></a></li>
+                                <li><a href="#"><div>우루과이 페소</div><div>UYU - $U</div></a></li>
+                                <li><a href="#"><div>유로</div><div>EUR - €</div></a></li>
+                                <li><a href="#"><div>이스라엘 신 셰켈</div><div>ILS - ₪</div></a></li>
+                                <li><a href="#"><div>인도 루피</div><div>INR - ₹</div></a></li>
+                                <li><a href="#"><div>일본 엔</div><div>JPY - ¥</div></a></li>
+                                <li><a href="#"><div>중국 위안</div><div>CNY - ￥</div></a></li>
+                                <li><a href="#"><div>체코 코루나</div><div>CZK - Kč</div></a></li>
+                                <li><a href="#"><div>칠레 페소</div><div>CLP - $</div></a></li>
+                                <li><a href="#"><div>캐나다 달러</div><div>CAD - $</div></a></li>
+                                <li><a href="#"><div>코스타리카 콜론</div><div>CRC - ₡</div></a></li>
+                                <li><a href="#"><div>콜롬비아 페소</div><div>COP - $</div></a></li>
+                                <li><a href="#"><div>크로아티아 쿠나</div><div>HRK - kn</div></a></li>
+                                <li><a href="#"><div>태국 바트</div><div>THB - ฿</div></a></li>
+                                <li><a href="#"><div>터키 리라</div><div>TRY - ₺</div></a></li>
+                                <li><a href="#"><div>페루 솔</div><div>PEN - S/</div></a></li>
+                                <li><a href="#"><div>폴란드 즐로티</div><div>PLN - zł</div></a></li>
+                                <li><a href="#"><div>필리핀 페소</div><div>PHP - ₱</div></a></li>
+                                <li><a href="#"><div>한국 원</div><div>KRW - ₩</div></a></li>
+                                <li><a href="#"><div>헝가리 포린트</div><div>HUF - Ft</div></a></li>
+                                <li><a href="#"><div>호주 달러</div><div>AUD - $</div></a></li>
+                                <li><a href="#"><div>홍콩 달러</div><div>HKD - $</div></a></li>
+                            </ul> 
+                        </div>
+                        </section>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

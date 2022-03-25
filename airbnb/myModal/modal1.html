@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        #lang_items > ul, #reco_items > ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #lang_items li, #reco_items li{
+            width: 196px;
+            height: 72px;
+            padding: 8px;
+            float: left;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        #modal1_wrapper{
+            width: 1032px;
+            height: 650px;
+        }
+        #modal1_main_wrapper{
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        #reco_items a, #lang_items a{
+            text-decoration: none;
+            color: black;
+        }
+        #reco_items a div:nth-child(2), #lang_items a div:nth-child(2){
+            color: gray;
+        }
+        #lang_items li:hover, #reco_items li:hover{
+            background-color: rgb(247, 247, 247);
+            border-radius: 8px;
+        }
+        #closeicon:hover{
+            border-radius: 50px;
+            background-color: rgb(247, 247, 247);
+        }
+        .modal1_box{
+            padding-bottom: 24px;
+            overflow:hidden;
+		    height:auto;
+        }
+        #modal1_head_wrapper > span{
+            display: inline-block;
+            padding: 15px 15px 15px 15px;
+        }
+        #modal1_translateBox{
+            width: 350px;
+            height: 48px;
+            padding: 16px 16px 16px 16px;
+            margin-top: 24px;
+            background-color: rgb(247, 247, 247);
+            border-radius: 8px;
+        }
+        #modal1_translateBox > div:nth-child(1){
+            float: left;
+        }
+        #modal1_translateBox > div:nth-child(2){
+            float: right;
+        }
+        #modal1_button{
+            background-color: rgb(247, 247, 247);
+        }
+        #modal1_head_wrapper > div:nth-child(1){
+            padding-left: 17px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        hr{
+            border: none;
+            height: 0.1px;
+            background-color: gainsboro;
+        }
+        #modal1_head_wrapper{
+            margin-bottom: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "modal1_wrapper">
+        <div id = "modal1_head_wrapper">
+            <div><a href="#"><img src="./ios7-close-empty_icon-icons.com_50304 (1).png" alt="" id="closeicon"></a></div> 
+            <div><hr></div>
+        </div>
+        <div id = "modal1_main_wrapper">
+            <section class="modal1_box">
+                <div id="modal1_translateBox">
+                    <div>
+                        <div>
+                            <span style="font-size: 16px;">번역</span>
+                            <span><img src="./google-translate-16.png" style="width: 19px; height: 19px;" alt=""></span>
+                        </div>
+                        <div style="font-size: 14px; color: gray; margin-top: 8px;">설명과 후기가 한국어로 자동 번역됩니다.</div>
+                    </div>
+                    <div>
+                        <div id="modal1_button">
+                           <a href="#"><img src="./button-off-48.png" alt="" id = "onofficon"></a> 
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="modal1_box style="clear: both;">
+                <div>
+                    <h2>추천 언어 및 지역</h2>
+                </div>
+                <div id = "reco_items">
+                    <ul>
+                        <li><a href="#"><div>English</div><div>United States</div></a></li>
+                        <li><a href="#"><div>English</div><div>United Kingdom</div></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="modal1_box" style="clear: both;">
+                <div>
+                    <h2>언어와 지역을 선택하세요</h2>
+                </div>
+                <div id = "lang_items">
+                    <ul>
+                        <li><a href="#"><div>한국어</div><div>대한민국</div></a></li>
+                        <li><a href="#"><div>Azərbaycan dili</div><div>Azərbaycan</div></a></li>
+                        <li><a href="#"><div>Bahasa Indonesia</div><div>Indonesia</div></a></li>
+                        <li><a href="#"><div>Bosanski</div><div>Bosna i Hercegovina</div></a></li>
+                        <li><a href="#"><div>Català</div><div>Espanya</div></a></li>
+                        <li><a href="#"><div>Čeština</div><div>Česká republika</div></a></li>
+                        <li><a href="#"><div>Crnogorski</div><div>Crna Gora</div></a></li>
+                        <li><a href="#" lang="da-DK"><div>Dansk</div><div>Danmark</div></a></li>
+                        <li><a href="#" lang="de-DE"><div>Deutsch</div><div>Deutschland</div></a></li>
+                        <li><a href="#" lang="de-AT"><div>Deutsch</div><div>Österreich</div></a></li>
+                        <li><a href="#" lang="de-CH"><div>Deutsch</div><div>Schweiz</div></a></li>
+                        <li><a href="#" lang="et-EE"><div>Eesti</div><div>Eesti</div></a></li>
+                        <li><a href="#" lang="en-AU"><div>English</div><div>Australia</div></a></li>
+                        <li><a href="#" lang="en-CA"><div>English</div><div>Canada</div></a></li>
+                        <li><a href="#" lang="en-GY"><div>English</div><div>Guyana</div></a></li>
+                        <li><a href="#" lang="en-IN"><div>English</div><div>India</div></a></li>
+                        <li><a href="#" lang="en-IE"><div>English</div><div>Ireland</div></a></li>
+                        <li><a href="#" lang="en-NZ"><div>English</div><div>New Zealand</div></a></li>
+                        <li><a href="#" lang="en-SG"><div>English</div><div>Singapore</div></a></li>
+                        <li><a href="#" lang="en-AE"><div>English</div><div>United Arab Emirates</div></a></li>
+                        <li><a href="#" lang="es-AR"><div>Español</div><div>Argentina</div></a></li>
+                        <li><a href="#" lang="es-BZ"><div>Español</div><div>Belice</div></a></li>
+                        <li><a href="#" lang="es-BO"><div>Español</div><div>Bolivia</div></a></li>
+                        <li><a href="#" lang="es-CL"><div>Español</div><div>Chile</div></a></li>
+                        <li><a href="#" lang="es-CO"><div>Español</div><div>Colombia</div></a></li>
+                        <li><a href="#" lang="es-CR"><div>Español</div><div>Costa Rica</div></a></li>
+                        <li><a href="#" lang="es-EC"><div>Español</div><div>Ecuador</div></a></li>
+                        <li><a href="#" lang="es-SV"><div>Español</div><div>El Salvador</div></a></li>
+                        <li><a href="#" lang="es-ES"><div>Español</div><div>España</div></a></li>
+                        <li><a href="#" lang="es-US"><div>Español</div><div>Estados Unidos</div></a></li>
+                        <li><a href="#" lang="es-GT"><div>Español</div><div>Guatemala</div></a></li>
+                        <li><a href="#" lang="es-HN"><div>Español</div><div>Honduras</div></a></li>
+                        <li><a href="#" lang="es-419"><div>Español</div><div>Latinoamérica</div></a></li>
+                        <li><a href="#" lang="es-MX"><div>Español</div><div>México</div></a></li>
+                        <li><a href="#" lang="es-NI"><div>Español</div><div>Nicaragua</div></a></li>
+                        <li><a href="#" lang="es-PA"><div>Español</div><div>Panamá</div></a></li>
+                        <li><a href="#" lang="es-PY"><div>Español</div><div>Paraguay</div></a></li>
+                        <li><a href="#" lang="es-PE"><div>Español</div><div>Perú</div></a></li>
+                        <li><a href="#" lang="es-VE"><div>Español</div><div>Venezuela</div></a></li>
+                        <li><a href="#" lang="fr-BE"><div>Français</div><div>Belgique</div></a></li>
+                        <li><a href="#" lang="fr-CA"><div>Français</div><div>Canada</div></a></li>
+                        <li><a href="#" lang="fr-FR"><div>Français</div><div>France</div></a></li>
+                        <li><a href="#" lang="fr-CH"><div>Français</div><div>Suisse</div></a></li>
+                        <li><a href="#" lang="ga-IE"><div>Gaeilge</div><div>Éire</div></a></li>
+                        <li><a href="#" lang="hr-HR"><div>Hrvatski</div><div>Hrvatska</div></a></li>
+                        <li><a href="#" lang="xh-ZA"><div>isiXhosa</div><div>eMzantsi Afrika</div></a></li>
+                        <li><a href="#" lang="zu-ZA"><div>isiZulu</div><div>iNingizimu Afrika</div></a></li>
+                        <li><a href="#" lang="is-IS"><div>Íslenska</div><div>Ísland</div></a></li>
+                        <li><a href="#" lang="it-IT"><div>Italiano</div><div>Italia</div></a></li>
+                        <li><a href="#" lang="it-CH"><div>Italiano</div><div>Svizzera</div></a></li>
+                        <li><a href="#" lang="sw-XX"><div>Kiswahili</div><div>Āfrika</div></a></li>
+                        <li><a href="#" lang="lv-LV"><div>Latviešu</div><div>Latvija</div></a></li>
+                        <li><a href="#" lang="lt-LT"><div>Lietuvių</div><div>Lietuva</div></a></li>
+                        <li><a href="#" lang="hu-HU"><div>Magyar</div><div>Magyarország</div></a></li>
+                        <li><a href="#" lang="mt-MT"><div>Malti</div><div>Malta</div></a></li>
+                        <li><a href="#" lang="ms-MY"><div>Melayu</div><div>Malaysia</div></a></li>
+                        <li><a href="#" lang="nl-BE"><div>Nederlands</div><div>België</div></a></li>
+                        <li><a href="#" lang="nl-NL"><div>Nederlands</div><div>Nederland</div></a></li>
+                        <li><a href="#" lang="no-NO"><div>Norsk</div><div>Norge</div></a></li>
+                        <li><a href="#" lang="pl-PL"><div>Polski</div><div>Polska</div></a></li>
+                        <li><a href="#" lang="pt-BR"><div>Português</div><div>Brasil</div></a></li>
+                        <li><a href="#" lang="pt-PT"><div>Português</div><div>Portugal</div></a></li>
+                        <li><a href="#" lang="ro-RO"><div>Română</div><div>România</div></a></li>
+                        <li><a href="#" lang="sq-AL"><div>Shqip</div><div>Shqipëri</div></a></li>
+                        <li><a href="#" lang="sk-SK"><div>Slovenčina</div><div>Slovensko</div></a></li>
+                        <li><a href="#" lang="sl-SI"><div>Slovenščina</div><div>Slovenija</div></a></li>
+                        <li><a href="#" lang="sr-RS"><div>Srpski</div><div>Srbija</div></a></li>
+                        <li><a href="#" lang="fi-FI"><div>Suomi</div><div>Suomi</div></a></li>
+                        <li><a href="#" lang="sv-SE"><div>Svenska</div><div>Sverige</div></a></li>
+                        <li><a href="#" lang="tl-PH"><div>Tagalog</div><div>Pilipinas</div></a></li>
+                        <li><a href="#" lang="vi-VN"><div>Tiếng Việt</div><div>Việt Nam</div></a></li>
+                        <li><a href="#" lang="tr-TR"><div>Türkçe</div><div>Türkiye</div></a></li>
+                        <li><a href="#" lang="el-GR"><div>Ελληνικά</div><div>Ελλάδα</div></a></li>
+                        <li><a href="#" lang="bg-BG"><div>Български</div><div>България</div></a></li>
+                        <li><a href="#" lang="mk-MK"><div>Македонски</div><div>Северна Македонија</div></a></li>
+                        <li><a href="#" lang="ru-RU"><div>Русский</div><div>Россия</div></a></li>
+                        <li><a href="#" lang="uk-UA"><div>Українська</div><div>Україна</div></a></li>
+                        <li><a href="#" lang="ka-GE"><div>ქართული</div><div>საქართველო</div></a></li>
+                        <li><a href="#" lang="hy-AM"><div>Հայերեն</div><div>Հայաստան</div></a></li>
+                        <li><a href="#" lang="he-IL"><div>עברית</div><div>ישראל</div></a></li>
+                        <li><a href="#" lang="ar-XX"><div>العربية</div><div>العالم</div></a></li>
+                        <li><a href="#" lang="hi-IN"><div>हिन्दी</div><div>भारत</div></a></li>
+                        <li><a href="#" lang="th-TH"><div>ไทย</div><div>ประเทศไทย</div></a></li>
+                        <li><a href="#" lang="ja-JP"><div>日本語</div><div>日本</div></a></li>
+                        <li><a href="#" lang="zh-US"><div>简体中文</div><div>美国</div></a></li>
+                        <li><a href="#" lang="zh-TW-US"><div>繁體中文</div><div>美國</div></a></li>
+                        <li><a href="#" lang="zh-CN"><div>简体中文</div><div>中国</div></a></li>
+                        <li><a href="#" lang="zh-HK"><div>繁體中文</div><div>香港</div></a></li>
+                        <li><a href="#" lang="zh-TW"><div>繁體中文</div><div>台灣</div></a></li>
+                        </ul>
+                    </div>
+                </section>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#onofficon').click(function(){
+                if($('#onofficon').attr('src') == "./button-off-48.png"){
+                    $('#onofficon').attr('src','./button-on-48.png');
+                }
+                else{
+                    $('#onofficon').attr('src','./button-off-48.png');
+                }
+            });
+
+            $('#lang_items li').click(function(){
+                $('#reco_items li').css('border','none');
+                $('#lang_items li').css('border','none');
+                $(this).css('border','1px solid');
+                $(this).css('border-radius','8px');
+            });
+
+            $('#reco_items li').click(function(){
+                $('#reco_items li').css('border','none');
+                $('#lang_items li').css('border','none');
+                $(this).css('border','1px solid');
+                $(this).css('border-radius','8px');
+            });
+        });
+    </script>
+</body>
+</html>

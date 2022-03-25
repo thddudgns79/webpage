@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        #curr_items > ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #curr_items li{
+            width: 196px;
+            height: 72px;
+            padding: 8px;
+            float: left;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        #modal2_wrapper{
+            width: 1032px;
+        }
+        #modal2_main_wrapper{
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        #curr_items a{
+            text-decoration: none;
+            color: black;
+        }
+        #curr_items a div:nth-child(2){
+            color: gray;
+        }
+        #curr_items li:hover{
+            background-color: rgb(247, 247, 247);
+            border-radius: 8px;
+        }
+        #closeicon:hover{
+            border-radius: 50px;
+            background-color: rgb(247, 247, 247);
+        }
+        .modal2_box{
+            padding-bottom: 24px;
+            margin-top: 24px;
+            overflow:hidden;
+		    height:auto;
+        }
+        #modal2_head_wrapper > span{
+            display: inline-block;
+            padding: 15px 15px 15px 15px;
+        }
+        #modal2_head_wrapper > div:nth-child(1){
+            padding-left: 17px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        hr{
+            border: none;
+            height: 0.1px;
+            background-color: gainsboro;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "modal2_wrapper">
+        <div id = "modal2_head_wrapper">
+            <div><a href=""><img src="./ios7-close-empty_icon-icons.com_50304 (1).png" alt="" id="closeicon"></a></div> 
+            <div><hr></div>
+        </div>
+        <div id = "modal2_main_wrapper">
+            <section class="modal2_box">
+                <div>
+                    <h2>통화를 선택하세요.</h2>
+                </div>
+                <div id="curr_items">
+                    <ul>
+                        <li><a href="#"><div>노르웨이 크로네</div><div>NOK - kr</div></a></li>
+                        <li><a href="#"><div>남아프리카공화국 란드</div><div>ZAR - R</div></a></li>
+                        <li><a href="#"><div>뉴질랜드 달러</div><div>NZD - $</div></a></li>
+                        <li><a href="#"><div>덴마크 크로네</div><div>DKK - kr</div></a></li>
+                        <li><a href="#"><div>러시아 루블</div><div>RUB - ₽</div></a></li>
+                        <li><a href="#"><div>루마니아 레우</div><div>RON - lei</div></a></li>
+                        <li><a href="#"><div>말레이시아 링깃</div><div>MYR - RM</div></a></li>
+                        <li><a href="#"><div>멕시코 페소</div><div>MXN - $</div></a></li>
+                        <li><a href="#"><div>모로코 디르함</div><div>MAD</div></a></li>
+                        <li><a href="#"><div>미국 달러</div><div>USD - $</div></a></li>
+                        <li><a href="#"><div>불가리아 레프</div><div>BGN - лв.</div></a></li>
+                        <li><a href="#"><div>브라질 레알</div><div>BRL - R$</div></a></li>
+                        <li><a href="#"><div>사우스아라비아 리얄</div><div>SAR - SR</div></a></li>
+                        <li><a href="#"><div>스웨덴 크로나</div><div>SEK - kr</div></a></li>
+                        <li><a href="#"><div>스위스 프랑</div><div>CHF</div></a></li>
+                        <li><a href="#"><div>신 타이완 달러</div><div>TWD - $</div></a></li>
+                        <li><a href="#"><div>싱가포르 달러</div><div>SGD - $</div></a></li>
+                        <li><a href="#"><div>아랍에미리트 디르함</div><div>AED - ﺩ.ﺇ</div></a></li>
+                        <li><a href="#"><div>영국 파운드</div><div>GBP - £</div></a></li>
+                        <li><a href="#"><div>우루과이 페소</div><div>UYU - $U</div></a></li>
+                        <li><a href="#"><div>유로</div><div>EUR - €</div></a></li>
+                        <li><a href="#"><div>이스라엘 신 셰켈</div><div>ILS - ₪</div></a></li>
+                        <li><a href="#"><div>인도 루피</div><div>INR - ₹</div></a></li>
+                        <li><a href="#"><div>일본 엔</div><div>JPY - ¥</div></a></li>
+                        <li><a href="#"><div>중국 위안</div><div>CNY - ￥</div></a></li>
+                        <li><a href="#"><div>체코 코루나</div><div>CZK - Kč</div></a></li>
+                        <li><a href="#"><div>칠레 페소</div><div>CLP - $</div></a></li>
+                        <li><a href="#"><div>캐나다 달러</div><div>CAD - $</div></a></li>
+                        <li><a href="#"><div>코스타리카 콜론</div><div>CRC - ₡</div></a></li>
+                        <li><a href="#"><div>콜롬비아 페소</div><div>COP - $</div></a></li>
+                        <li><a href="#"><div>크로아티아 쿠나</div><div>HRK - kn</div></a></li>
+                        <li><a href="#"><div>태국 바트</div><div>THB - ฿</div></a></li>
+                        <li><a href="#"><div>터키 리라</div><div>TRY - ₺</div></a></li>
+                        <li><a href="#"><div>페루 솔</div><div>PEN - S/</div></a></li>
+                        <li><a href="#"><div>폴란드 즐로티</div><div>PLN - zł</div></a></li>
+                        <li><a href="#"><div>필리핀 페소</div><div>PHP - ₱</div></a></li>
+                        <li><a href="#"><div>한국 원</div><div>KRW - ₩</div></a></li>
+                        <li><a href="#"><div>헝가리 포린트</div><div>HUF - Ft</div></a></li>
+                        <li><a href="#"><div>호주 달러</div><div>AUD - $</div></a></li>
+                        <li><a href="#"><div>홍콩 달러</div><div>HKD - $</div></a></li>
+                    </ul> 
+                </div>
+                </section>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#curr_items li').click(function(){
+                $('#curr_items li').css('border','none');
+                $(this).css('border','1px solid');
+                $(this).css('border-radius','8px');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+}
+
+/* l1_filter */
+#l1_filter_modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+#l1_filter_modal_wrapper{
+    width: 39%;
+    height: 90%;
+    background-color: white;
+    margin: 3% auto;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    border-radius: 15px;
+}
+#l1_filter_modal_main_wrapper{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+#l1_filter_modal_closeIcon{
+    padding: 15px 15px 15px 15px;
+}
+#l1_filter_modal_closeIcon > button{
+    border: none;
+    outline: 0;
+    width: 36px;
+    height: 36px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+#l1_filter_modal_closeIcon > button > img:hover{
+    border-radius: 50%;
+    background-color: rgb(247, 247, 247);
+}
+.l1_filter_modal_box{
+    padding-top: 28px;
+    padding-bottom: 28px;
+    overflow:hidden;
+    height:auto;
+}
+
+.l1_filter_modal_box > div:nth-child(1){
+    font-size: 22px;
+    line-height: 26px;
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    padding-bottom: 24px;
+}
+.l1_filter_modal_checkboxGroup{
+    display: flex;
+    flex-wrap: wrap;
+}
+.l1_filter_modal_checkboxGroup > label > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.l1_filter_modal_checkboxGroup > label{
+    flex-basis: 50%;
+    padding: 12px 12px 12px 0px;
+}
+
+.l1_filter_modal_inputbox{
+    flex-basis: 1%;
+    cursor: pointer;
+}
+.l1_filter_modal_inputbox > input{
+    margin : 0;
+    cursor: pointer;
+}
+.l1_filter_modal_textbox{
+    flex-basis: 88%;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+    line-height: 20px;
+    word-wrap: break-word;
+}
+.l1_filter_modal_smalltext{
+    color: rgb(113, 113, 113);
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 18px;
+}
+.l1_filter_modal_normalText{
+    font-weight: 400;
+    font-size: 16px;
+}
+.l1_filter_modal_categorybox{
+    padding-bottom: 16px;
+}
+.l1_filter_modal_categoryText{
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 7px;
+}
+#l1_filter_modal_uniqueText{
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(113, 113, 113);
+    padding-bottom: 24px;
+}
+.l1_filter_modal_hr > hr{
+    border: none;
+    height: 0.1px;
+    background-color: gainsboro;
+}
+.l1_filter_modal_moreContent{
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+.l1_filter_modal_moreContent > button, #l1_filter_modal_uniqueMoreContent > button, .l1_filter_modal_soloContent > button{
+    text-decoration: underline;
+    border-radius: 4px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+    line-height: 18px;
+    font-size: 14px;
+    border: none;
+    outline: 0;
+    background-color: white;
+    cursor: pointer;
+}
+.l1_filter_modal_inputbox > input{
+    zoom: 2.0;
+ }
+ .l1_filter_modal_updownBox{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .l1_filter_modal_buttonGroup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.l1_filter_modal_buttonGroup button{
+    border: none;
+    outline: none;
+    background-color: white;
+}
+.l1_filter_modal_buttonGroup > div{
+    margin-right: 15px;
+}
+.l1_filter_modal_buttonGroup  img{
+    width: 32px;
+    height: 32px;
+}
+.l1_filter_modal_numberText{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+}
+.l1_filter_modal_minusButton > button, .l1_filter_modal_plusButton > button{
+    cursor: pointer;
+}
+.l1_filter_modal_textImgBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#l1_filter_modal_footer_buttonWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px 16px 24px;
+}
+#l1_filter_modal_footer_leftButton > button{
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    outline: none;
+    padding: 10px;
+    margin: 0px -10px;
+    border: none;
+    color: rgb(34, 34, 34);
+    text-decoration: underline;
+    background-color: rgb(255, 255, 255);
+}
+#l1_filter_modal_footer_leftButton > button:hover{
+    border-radius: 8px;
+    background-color: rgb(247, 247, 247);
+}
+#l1_filter_modal_footer_rightButton > button{
+    cursor: pointer;
+    margin: 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    outline: none;
+    padding: 14px 24px;
+    border: none;
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+}
+#l1_filter_modal_footer_rightButton > button:hover{
+    background: rgb(70, 70, 70);
+}
+.l1_filter_modal_clickArea:hover{
+    cursor: pointer;
+}
+
+
+ /* l1_header */
+ #l1_buttonGroup{
+     padding-top: 20px;
+ }
+ #l1_buttonGroup > button{
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+ }
+
+ #l1_buttonGroup > button:hover{
+    background-color: rgb(247, 247, 247);
+    border-radius: 15px;
+ }

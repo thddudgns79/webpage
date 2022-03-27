@@ -67,12 +67,19 @@ $(function(){
             $('.m3_currBtn').css({'margin-bottom':'6px', 'margin-top':'6px'});
     });
 
+    //l1 언제든 모달
+    $("#l1_header2_filter1_button").click(function(){
+        if($("#l1_header2_fiter1_modal_wrap").css("display") == "none"){
+            $("#l1_header2_fiter1_modal_wrap").show();
+        }
+        else{
+            $("#l1_header2_fiter1_modal_wrap").hide();
+        }
+    });
 
 
 
-
-
-    //l1 filter
+    //l1 필터 모달
     $(".l1_filter_modal_moreContent").each(function(index, item){
         $(item).prev().children().each(function(index, item){
             if(index >= 4){

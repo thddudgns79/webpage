@@ -74,8 +74,9 @@ $(function(){
 
         var $imgNode = $("<img class='l2_main_imgNode'>");
         var $imgNode2 = $("<img class='l2_main_imgNode2'>");
-        $($imgNode).attr("src", item.path);
-        $($imgNode2).attr("src", "./images/heartUnclick.png");
+        $imgNode.attr("src", item.path);
+        $imgNode2.attr("src", "./images/heartUnclick.png");
+        
 
         $($imgContainer).append($imgNode);
         $($imgContainer).append($imgNode2);
@@ -91,15 +92,16 @@ $(function(){
 
         $(".l2_main_grid_container").append($gridItem);
     }
+
     $(".l2_main_imgNode2").click(function(){
-        console.log("clicked");
         if($(this).attr("src") == "./images/heartUnclick.png"){
-            $(this).attr("src", "./images/heartclick.png");
+            $(this).attr("src", "./images/heartClick.png");
         }
         else{
             $(this).attr("src", "./images/heartUnclick.png");
         }
     });
+
     $(".l1_nav").click(function(){
         var idx = $(".l1_nav").index(this);
         if(idx == 13) return; // 더보기 버튼
@@ -116,8 +118,8 @@ $(function(){
 
                 var $imgNode = $("<img class='l2_main_imgNode'>");
                 var $imgNode2 = $("<img class='l2_main_imgNode2'>");
-                $($imgNode).attr("src", item.path);
-                $($imgNode2).attr("src", "./images/heartUnclick.png");
+                $imgNode.attr("src", item.path);
+                $imgNode2.attr("src", "./images/heartUnclick.png");
 
                 $($imgContainer).append($imgNode);
                 $($imgContainer).append($imgNode2);
@@ -134,9 +136,8 @@ $(function(){
                 $(".l2_main_grid_container").append($gridItem);
             }
             $(".l2_main_imgNode2").click(function(){
-                console.log("clicked");
                 if($(this).attr("src") == "./images/heartUnclick.png"){
-                    $(this).attr("src", "./images/heartclick.png");
+                    $(this).attr("src", "./images/heartClick.png");
                 }
                 else{
                     $(this).attr("src", "./images/heartUnclick.png");
@@ -156,8 +157,8 @@ $(function(){
 
                 var $imgNode = $("<img class='l2_main_imgNode'>");
                 var $imgNode2 = $("<img class='l2_main_imgNode2'>");
-                $($imgNode).attr("src", item.path);
-                $($imgNode2).attr("src", "./images/heartUnclick.png");
+                $imgNode.attr("src", item.path);
+                $imgNode2.attr("src", "./images/heartUnclick.png");
 
                 $($imgContainer).append($imgNode);
                 $($imgContainer).append($imgNode2);
@@ -174,9 +175,8 @@ $(function(){
                 $(".l2_main_grid_container").append($gridItem);
             }
             $(".l2_main_imgNode2").click(function(){
-                console.log("clicked");
                 if($(this).attr("src") == "./images/heartUnclick.png"){
-                    $(this).attr("src", "./images/heartclick.png");
+                    $(this).attr("src", "./images/heartClick.png");
                 }
                 else{
                     $(this).attr("src", "./images/heartUnclick.png");

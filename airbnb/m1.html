@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" sizes="76x76" type="image/x-icon"
+        href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico">
+    <link rel="stylesheet" href="./css/m1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/843b6d386f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+ 
+<body>
+    <div class="main_top_top">
+        <a class="corona_notice" href="https://www.airbnb.co.kr/d/covidsafety" target="_blank"">
+            <span class=" notice_content" style="color: white;">에어비엔비의 코로나19대응 방안에 대한 최신 정보를 확인하세요</span>
+        </a>
+    </div>
+    <header class="m1_header">
+        <div class="m1_header_inner">
+            <div class="m1_header_gnb">
+                <a href="" class="m1_header_logo"><svg width="102" height="32" fill="currentcolor"
+                        style="display: inline-block; color: white;">
+                        <path
+                            d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5zM41.54 24.12a5.02 5.02 0 01-3.95-1.83 6.55 6.55 0 01-1.6-4.48 6.96 6.96 0 011.66-4.58 5.3 5.3 0 014.08-1.86 4.3 4.3 0 013.7 1.92l.1-1.57h2.92V23.8h-2.93l-.1-1.76a4.52 4.52 0 01-3.88 2.08zm.76-2.88c.58 0 1.09-.16 1.57-.45.44-.32.8-.74 1.08-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.55.45zM53.45 8.46c0 .35-.06.67-.22.93-.16.25-.38.48-.67.64-.29.16-.6.22-.92.22-.32 0-.64-.06-.93-.22a1.84 1.84 0 01-.67-.64 1.82 1.82 0 01-.22-.93c0-.36.07-.68.22-.93.16-.3.39-.48.67-.64.29-.16.6-.23.93-.23a1.84 1.84 0 011.6.86 2 2 0 01.21.94zm-3.4 15.3V11.7h3.18v12.08h-3.19zm11.68-8.9v.04c-.15-.07-.35-.1-.5-.13-.2-.04-.36-.04-.55-.04-.89 0-1.56.26-2 .8-.48.55-.7 1.32-.7 2.31v5.93h-3.19V11.69h2.93l.1 1.83c.32-.64.7-1.12 1.24-1.48a3.1 3.1 0 011.81-.5c.23 0 .45.02.64.06.1.03.16.03.22.06v3.2zm1.28 8.9V6.74h3.18v6.5c.45-.58.96-1.03 1.6-1.38a5.02 5.02 0 016.08 1.31 6.55 6.55 0 011.6 4.49 6.96 6.96 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.1 1.57-2.92.03zm6.15-2.52c.57 0 1.08-.16 1.56-.45.44-.32.8-.74 1.08-1.25.26-.51.38-1.12.38-1.8 0-.67-.12-1.28-.38-1.79a3.75 3.75 0 00-1.08-1.25 2.95 2.95 0 00-3.12 0c-.45.32-.8.74-1.09 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.56.45zm7.51 2.53V11.69h2.93l.1 1.57a3.96 3.96 0 013.54-1.89 4.1 4.1 0 013.82 2.44c.35.76.54 1.7.54 2.75v7.24h-3.19v-6.82c0-.84-.19-1.5-.57-1.99-.38-.48-.9-.74-1.56-.74-.48 0-.9.1-1.27.32-.35.23-.64.52-.86.93a2.7 2.7 0 00-.32 1.35v6.92h-3.16zm12.52 0V6.73h3.19v6.5a4.67 4.67 0 013.73-1.89 5.02 5.02 0 013.95 1.83 6.57 6.57 0 011.59 4.48 6.95 6.95 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.09 1.57-2.93.03zm6.18-2.53c.58 0 1.09-.16 1.56-.45.45-.32.8-.74 1.09-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a3.63 3.63 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.95.45 1.55.45z">
+                        </path>
+                    </svg></a>
+                <ul class="gnb">
+                    <li><a href="">숙소</a></li>
+                    <li><a href="">체험</a></li>
+                    <li><a href="">온라인 체험</a></li>
+                </ul>
+                <ul class="m1_header_right">
+                    <li><a href="">호스트 되기</a></li>
+                    <li><a href=""><i class="fas fa-globe"></i></a></li>
+                    <div class="m1_header_right_profile">
+                        <i class="fas fa-bars"></i>
+                        <i class="far fa-user-circle"></i>
+                    </div>
+                    <div id="m1_profile_menu">
+                        <div class="m1_sign"><span style="font-weight: 600;">회원가입</span></div>
+                        <br>
+                        <div class="m1_sign">로그인</div>
+                        <br>
+                        <hr style="border: 1px solid gray;">
+                        <br>
+                        <div>숙소 호스팅 되기</div>
+                        <br>
+                        <div>체험 호스팅하기</div>
+                        <br>
+                        <div>도움말</div>
+                    </div>
+                    <div style="background:black; width : 100%; height: 100%; display: none; z-index: 150; " class="m1_modal">
+                       
+                            <div class="m2_join_modal">
+                                <div class="m2_join_modal_header">
+                                    <div class="m2_join_modal_close">
+                                        <button class="m2_join_modal_close">X</button>
+                                    </div>
+                                    <div class="m2_join_modal_title">
+                                        로그인 또는 회원 가입
+                                    </div>
+                                </div>
+                                <div class="m2_join_modal_body">
+                                    <div class="m2_join_modal_body_title">
+                                        에어비앤비에 오신 것을 환영합니다.
+                                    </div>
+                                    <div class="m2_join_modal_body_input">
+                                        <select class="m2_join_modal_body_input_select">
+                                            <option value="242CG">콩고 (+242)</option>
+                                            <option value="243CD">콩고 민주 공화국 (+243)</option>
+                                            <option value="852HK">홍콩 (+852)</option>
+                                            <option value="383XK">코소보 (+383)</option>
+                                            <option value="853MO">마카오 (+853)</option>
+                                            <option value="389MK">북마케도니아 (+389)</option>
+                                            <option value="886TW">대만 (+886)</option>
+                                            <option value="233GH">가나 (+233)</option>
+                                            <option value="241GA">가봉 (+241)</option>
+                                            <option value="592GY">가이아나 (+592)</option>
+                                            <option value="220GM">감비아 (+220)</option>
+                                            <option value="44GG">건지 (+44)</option>
+                                            <option value="590GP">과들루프 (+590)</option>
+                                            <option value="502GT">과테말라 (+502)</option>
+                                            <option value="1GU">괌 (+1)</option>
+                                            <option value="1GD">그레나다 (+1)</option>
+                                            <option value="30GR">그리스 (+30)</option>
+                                            <option value="299GL">그린란드 (+299)</option>
+                                            <option value="224GN">기니 (+224)</option>
+                                            <option value="245GW">기니비사우 (+245)</option>
+                                            <option value="264NA">나미비아 (+264)</option>
+                                            <option value="674NR">나우루 (+674)</option>
+                                            <option value="234NG">나이지리아 (+234)</option>
+                                            <option value="211SS">남수단 (+211)</option>
+                                            <option value="27ZA">남아프리카 (+27)</option>
+                                            <option value="31NL">네덜란드 (+31)</option>
+                                            <option value="599BQ">네덜란드령 카리브 (+599)</option>
+                                            <option value="977NP">네팔 (+977)</option>
+                                            <option value="47NO">노르웨이 (+47)</option>
+                                            <option value="672NF">노퍽섬 (+672)</option>
+                                            <option value="64NZ">뉴질랜드 (+64)</option>
+                                            <option value="687NC">뉴칼레도니아 (+687)</option>
+                                            <option value="683NU">니우에 (+683)</option>
+                                            <option value="227NE">니제르 (+227)</option>
+                                            <option value="505NI">니카라과 (+505)</option>
+                                            <option value="45DK">덴마크 (+45)</option>
+                                            <option value="1DM">도미니카 (+1)</option>
+                                            <option value="1DO">도미니카 공화국 (+1)</option>
+                                            <option value="1US" selected>미국 (+1)</option>
+                                        </select>
+                                        <input type="text" placeholder="전화번호">
+                                    </div>
+                                    <div class="m2_join_modal_body_word">
+                                        <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메세지 요금 및 데이터 요금이 부과됩니다.</p>
+                                        <a href="#">개인정보 처리방침</a>
+                                    </div>
+                                    <div class="m2_join_modal_body_continue">
+                                        <input type="submit" value="계속">
+                                    </div>
+                                    <div class="m2_join_modal_body_or">
+                                        &nbsp;&nbsp;&nbsp;또는&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div style="text-align:center">
+                                        <div class="m2_join_modal_body_facebook">
+                                            <button type="button" class="m2_join_btn">
+                                                <div>
+                                                    <img src="./images/facebook.png">
+                                                </div>
+                                                <div class="m2_join_btn_word">
+                                                    페이스북으로 로그인하기
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="m2_join_modal_body_google">
+                                            <button class="m2_join_btn">
+                                                <div>
+                                                    <img src="./images/google.png">
+                                                </div>
+                                                <div class="m2_join_btn_word">
+                                                    구글로 로그인하기
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="m2_join_modal_body_apple">
+                                            <button class="m2_join_btn">
+                                                <div>
+                                                    <img src="./images/apple.png">
+                                                </div>
+                                                <div class="m2_join_btn_word">
+                                                    Apple 계정으로 계속하기
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="m2_join_modal_body_email">
+                                            <button class="m2_join_btn">
+                                                <div>
+                                                    <img src="./images/email.png">
+                                                </div>
+                                                <div class="m2_join_btn_word">
+                                                    이메일로 로그인하기
+                                                </div>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                       
+                        </div>
+                </ul>
+            </div>
+            <div class="m1_header_search_bar">
+                <div class="m1_header_search_menu" id="m1_search_btn1">
+                    <label for="location">위치</label>
+                    <input id="location" type="text" placeholder="어디로 여행가세요?">
+                </div>
+                <div class="m1_nav_location">
+                    <div class="m1_nav_location_01"><span style="font-weight: 700;">언제 어디로든 떠나는 여행</span></div>
+                    <div class="m1_nav_location_02">
+                        <div class="m1_nav_location_02_01">
+                            <a href="#"><span
+                                    style="font-weight: 800; color: rgb(111, 1, 156); font-size: 18px;">유연한
+                                    검색</span></a>
+                        </div>
+                        <div>
+                            <video autoplay="" crossorigin="anonymous" playsinline=""
+                                poster="https://a0.muscache.com/pictures/04c0a34f-9880-48b7-a69c-49011f602a35.jpg"
+                                preload="auto" width="28" height="28">
+                                <source
+                                    src="https://a0.muscache.com/videos/vopt/13/e1/13e14ffc-822c-5e84-aa58-d6a6527dc218/13e14ffc822c5e84aa58d6a6527dc218.mp4?impolicy=low_quality"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="m1_header_search_menu" id="m1_serach_btn2">
+                    <label for="checkin">체크인</label>
+                    <div class="date_input1">날짜 입력</div>
+                </div>
+                <div class="m1_header_search_menu" id="m1_serach_btn3">
+                    <label for="checkout">체크아웃</label>
+                    <div class="date_input2">날짜 입력</div>
+                </div>
+                <div class="m1_header_search_menu4">
+                    <div class="m1_header_search_menu" id="m1_search_btn4">
+                        <label for="number">인원</label>
+                        <div class="date_input">게스트 추가</div>
+                       
+                    </div>
+                    <div class="m1_186q534" style="background: #FF385C; max-width: 48px; box-sizing: border-box; margin-right: 5px; border-radius: 65%; ">
+                        <div class="m1_header_search_menu" id="m1_14lk9e14" style="margin: 0 auto;">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: inline-block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible; color: white; padding-top: 10px; padding-right: 5px;">
+                                <g fill="none">
+                                    <path
+                                        d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9">
+                                    </path>
+                                </g>
+                            </svg>
+                            <div class="m1_nav_location">
+                                <div class="m1_nav_location_01"><span style="font-weight: 700;">언제 어디로든 떠나는 여행</span></div>
+                                <div class="m1_nav_location_02">
+                                    <div class="m1_nav_location_02_01">
+                                        <a href="#"><span
+                                                style="font-weight: 800; color: rgb(111, 1, 156); font-size: 18px;">유연한
+                                                검색</span></a>
+                                    </div>
+                                    <div>
+                                        <video autoplay="" crossorigin="anonymous" playsinline=""
+                                            poster="https://a0.muscache.com/pictures/04c0a34f-9880-48b7-a69c-49011f602a35.jpg"
+                                            preload="auto" width="28" height="28">
+                                            <source
+                                                src="https://a0.muscache.com/videos/vopt/13/e1/13e14ffc-822c-5e84-aa58-d6a6527dc218/13e14ffc822c5e84aa58d6a6527dc218.mp4?impolicy=low_quality"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m1_nav_personnel">
+            <div class="m1_nav_personnel_01">
+                <div class="m1_nav_personnel_01_01"><span style="font-weight: 600; font-size: 17px;" >성인</span><br>
+                    <span style="font-size: 15px; font-weight: 200;">만 13세 이상</span>
+                </div>
+                <div class="m1_nav_personnel_01_02"><input type="button" value="-" onclick='count("minus1")' disabled="true" class="btn_minus1">
+                    <div id="adult"><span>0</span></div>
+                    <input type="button" value="+" onclick='count("plus1")'></button>
+                </div>
+            </div>
+            <br>
+            <div class="m1_nav_personnel_02">
+                <div class="m1_nav_personnel_02_01"><span style="font-weight: 600; font-size: 17px;">어린이</span><br>
+                    <span style="font-size: 15px; font-weight: 200;">만 2세~12세</span>
+                </div>
+                <div class="m1_nav_personnel_02_02"><input type="button" value="-" onclick='count("minus2")' disabled="true" class="btn_minus2"></button>
+                    <div id="child">0</div>
+                    <input type="button" value="+" onclick='count("plus2")'></button>
+                </div>
+            </div>
+            <br>
+            <div class="m1_nav_personnel_03">
+                <div class="m1_nav_personnel_03_01"><span style="font-weight: 600; font-size: 17px;">유아</span><br>
+                    <span style="font-size: 15px; font-weight: 200;">만 2세 미만</span>
+                </div>
+                <div class="m1_nav_personnel_03_02"><input type="button" value="-" onclick='count("minus3")' disabled="true" class="btn_minus3"></button>
+                    <div id="baby">0</div><input type="button" value="+" onclick='count("plus3")'></button>
+                </div>
+            </div>
+            <br>
+            <div class="m1_nav_personnel_04">
+                <div class="m1_nav_personnel_04_01"><span style="font-weight: 600; font-size: 17px;">반려동물</span><br>
+                    <a href="#"><span style="font-weight: 600;">반려동물을 동반하시나요?</span></a>
+                </div>
+                <div class="m1_nav_personnel_04_02"><input type="button" value="-" onclick='count("minus4")' disabled="true" class="btn_minus4"></button>
+                    <div id="animal">0</div><input type="button" value="+" onclick='count("plus4")'></button>
+                </div>
+            </div>
+            <br>
+            <div class="m1_nav_personnel_05">
+                <div class="m1_nav_personnel_05_01"><span style="font-weight: 200; font-size: 15px;">반려동물을 3마리 이상 동반하는
+                        경우, 반드시 호스트에게 알려주세요.</span></div>
+            </div>
+        </div>
+        <div class="m1_nav_location">
+            <div class="m1_nav_location_01"><span style="font-weight: 700;">언제 어디로든 떠나는 여행</span></div>
+            <div class="m1_nav_location_02">
+                <div class="m1_nav_location_02_01">
+                    <a href="#"><span
+                            style="font-weight: 800; color: rgb(111, 1, 156); font-size: 18px;">유연한
+                            검색</span></a>
+                </div>
+                <div>
+                    <video autoplay="" crossorigin="anonymous" playsinline=""
+                        poster="https://a0.muscache.com/pictures/04c0a34f-9880-48b7-a69c-49011f602a35.jpg"
+                        preload="auto" width="28" height="28">
+                        <source
+                            src="https://a0.muscache.com/videos/vopt/13/e1/13e14ffc-822c-5e84-aa58-d6a6527dc218/13e14ffc822c5e84aa58d6a6527dc218.mp4?impolicy=low_quality"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="top_box2">
+            <div class="top_box2_content">
+                <span class="top_box2_content_font">10만 명에 달하는 우크라이나 피란민에게 임시 숙소를 제공해주세요</span>
+                <br>
+                <br>
+                <div class="top_box2_link"><a
+                        href="https://ko.airbnb.org/help-ukraine?_ga=2.175054306.1974585485.1647459175-1741432481.1647459175&_set_bev_on_new_domain=1647557097_N2VjYjYwNmY0N2Ix">
+                        <span class="top_box_button_content" style="font-weight: 800;">자세히 알아보기</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        $(".m1_header_right_profile").on("click", function () {
+            if ($("#m1_profile_menu").css("display") == "none") {
+                $("#m1_profile_menu").css("display", "inline");
+            } else {
+                $("#m1_profile_menu").css("display", "none");
+            }
+        });
+ 
+        $("#m1_search_btn1").on("click", function (e) {
+            if ($(".m1_nav_location").css("display") == "none") {
+                $(".m1_nav_location").css("display", "inline");
+            }
+        });
+ 
+        $("#m1_search_btn4").on("click", function (e) {
+            if ($(".m1_nav_personnel").css("display") == "none") {
+                $(".m1_nav_personnel").css("display", "inline");
+            } else {
+                $(".m1_nav_personnel").css("display", 'none');
+            }
+        });
+ 
+        $(".m1_186q534").on("click", function(){
+            if($(".m1_nav_location").css("display") == "none"){
+                $(".m1_nav_location").css("display", "inline");
+                console.log("test");
+            }
+        });
+ 
+        $(document).click(function(e){
+ 
+            if (!$(e.target).is('#m1_search_btn1')&&!$(e.target).is('#location')) {
+                 $(".m1_nav_location").css("display", "none");
+            }
+        });
+ 
+        // $(document).click(function(e){
+        //     if(!$('.m1_nav_location').has(e.target).length && $('.m1_nav_location').css('display') == 'inline'){
+        //         console.log("tst");
+        //         $('.m1_nav_location').css('display', 'none');
+        //     }
+        // });
+ 
+        function count(type) {
+            var cntElement1 = document.getElementById("adult");
+            var num1 = cntElement1.innerText;
+            if (type == 'plus1') {
+                num1 = parseInt(num1) + 1;
+            } else if (type == 'minus1') {
+                num1 = parseInt(num1) - 1;
+            }
+            var cntElement2 = document.getElementById("child");
+            var num2 = cntElement2.innerText;
+            if (type == 'plus2') {
+                num2 = parseInt(num2) + 1;
+            } else if (type == 'minus2') {
+                num2 = parseInt(num2) - 1;
+            }
+ 
+            var cntElement3 = document.getElementById("baby");
+            var num3 = cntElement3.innerText;
+            if (type == 'plus3') {
+                num3 = parseInt(num3) + 1;
+            } else if (type == 'minus3') {
+                num3 = parseInt(num3) - 1;
+            }
+ 
+            var cntElement4 = document.getElementById("animal");
+            var num4 = cntElement4.innerText;
+            if (type == 'plus4') {
+                num4 = parseInt(num4) + 1;
+            } else if (type == 'minus4') {
+                num4 = parseInt(num4) - 1;
+            }
+ 
+            if(num1 >= 1){
+                $('.btn_minus1').removeAttr("disabled");
+            }else{
+                $('.btn_minus1').attr("disabled", "disabled");
+            }
+            if(num2 >= 1){
+                $('.btn_minus2').removeAttr("disabled");
+            }else{
+                $('.btn_minus2').attr("disabled", "disabled");
+            }
+            if(num3 >= 1){
+                $('.btn_minus3').removeAttr("disabled");
+            }else{
+                $('.btn_minus3').attr("disabled", "disabled");
+            }
+            if(num4 >= 1){
+                $('.btn_minus4').removeAttr("disabled");
+            }else{
+                $('.btn_minus4').attr("disabled", "disabled");
+            }
+ 
+            cntElement4.innerText = num4;
+ 
+            cntElement3.innerText = num3;
+ 
+            cntElement2.innerText = num2;
+ 
+            cntElement1.innerText = num1;
+        }
+ 
+    //modal 창 관련
+    { //modal window class = m1_modal 버튼 m1_sign
+        $(function(){
+            const eleModal = document.querySelector('.m1_modal');
+ 
+            document.querySelector('.m1_sign').addEventListener('click', openModal);
+            document.querySelector('.m2_join_modal_close').addEventListener('click', closeModal);
+            document.querySelector('.m1_modal').addEventListener('click', windowModal);
+            function openModal(){
+                eleModal.style.display = "block";
+            }
+            function closeModal(){
+                eleModal.style.display = "none";
+            }
+            function windowModal(){
+                if(event.target==this){
+                    eleModal.style.display = "none";
+                }
+            }
+        });
+    }
+ 
+    //날짜 입력 달력
+    {
+        $(function() {
+ 
+            $('#m1_serach_btn2').daterangepicker({
+                autoUpdateInput: false,
+                locale: {
+                cancelLabel: 'Clear'
+            }
+        });
+ 
+        $('#m1_serach_btn3').daterangepicker({
+                autoUpdateInput: false,
+                locale: {
+                cancelLabel: 'Clear'
+            }
+        });
+ 
+        $('#m1_serach_btn2').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(".date_input1").text(picker.startDate.format('MM/DD/YYYY'));
+        $(".date_input2").text(picker.endDate.format('MM/DD/YYYY'));
+        });
+ 
+        $('#m1_serach_btn2').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+        });
+ 
+        $('#m1_serach_btn3').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(".date_input1").text(picker.startDate.format('MM/DD/YYYY'));
+        $(".date_input2").text(picker.endDate.format('MM/DD/YYYY'));
+        });
+ 
+        $('#m1_serach_btn3').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+        });
+ 
+        });
+    }
+    </script>
+</body>
+ 
+</html>

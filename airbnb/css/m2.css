@@ -26,12 +26,13 @@
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 54px;
-    position: absolute;
+    position: relative;
+    text-align: center;
     top: 480px
 }
 #m2_id_sec1ConBtn {
     position: absolute;
-    top: 575px;
+    top: 600px;
     background: white;
     width: 150px;
     height: 50px;
@@ -262,6 +263,54 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
+}
+@media (max-width:1400px) {
+    #m2_id_sec1ConText {
+        font-size: 38px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 43px;
+    }
+    #m2_id_sec2TitleText {
+        font-size: 33px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 37px;
+    }
+    #m2_id_sec2Con1Upper, #m2_id_sec2Con2Upper, #m2_id_sec2Con3Upper, #m2_id_sec2Con4Upper, #m2_id_sec2Con1Bottom, #m2_id_sec2Con2Bottom, #m2_id_sec2Con3Bottom, #m2_id_sec2Con4Bottom {
+        height: 200px;
+        width: 300px;
+    }
+    #m2_id_sec3TitleText {
+        font-size: 33px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 37px;
+    }
+    #m2_id_sec3Con1Title, #m2_id_sec3Con2Title {
+        font-size: 41px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 46px;
+    }
+    #m2_id_sec4ConTitle {
+        font-size: 74px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 81px;
+    }
+    #m2_id_sec2Con1BottomText1, #m2_id_sec2Con2BottomText1, #m2_id_sec2Con3BottomText1, #m2_id_sec2Con4BottomText1 {
+        font-size: 27px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        line-height: 30px;
+        margin-bottom: 8px;
+    }
+    #m2_id_sec2Con1BottomText2, #m2_id_sec2Con2BottomText2, #m2_id_sec2Con3BottomText2, #m2_id_sec2Con4BottomText2 {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+    }
 }
 @media (max-width:1000px) {
     #m2_id_sec2Con {
